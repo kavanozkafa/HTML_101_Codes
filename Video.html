@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<title>Kavanozkafa</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<!-- video dosyası ekleme.dosya klasörü ve ses uzantısına dikkat et.
+
+	controls sesin çalınıp çalınmayacağını kontrol eder.
+	autoplay sayfa açıldığında çalmaya başlatır.
+	loop şarkı her bittiğinde tekrar başlatır.
+	muted şarkıyı sessizde açar.
+	preload şarkıyı sayfa açıldığında yüklemez.kullanıcıya bırakır.auto|metadata|none
+	width genişlik pixel
+	height yükseklik pixel
+
+	-->
+
+<!-- Local Dizinden video ekleme -->
+<video controls="controls" width="350" height="250" autoplay="autoplay" muted="" loop="loop" poster="sıra sana da gelecek.">
+		
+		<source src="TextFormatting.mp4" type="video/mp4" />
+
+		<source src="TextFormatting.ogv" type="video/ogg" />
+
+</video>
+	
+
+<!-- internetten çerçeve ile ekleme -->
+	<iframe src="https://player.vimeo.com/video/264829470" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+		
+	</iframe>
+
+
+<!-- youtube'dan çerçeve ile ekleme -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7OHdQa7rDYs?controls=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+
+<!--internetten embed ile ekleme  -->
+	<embed src="https://www.youtube.com/embed/7OHdQa7rDYs">
+		
+
+
+</body>
+</html>
