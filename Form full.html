@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<title>Kavanozkafa</title>
+	<meta charset="utf-8">
+<!-- bu özellikleri farklı tarayıcılarda deneyin -->
+</head>
+<body>
+
+<!-- form etiketi yapı oluşturmamızı sağlar.bu yapı kullanıcıya bilgi alacağımızı belirtir.
+
+    action verilerin nereye gönderileceğini belirtir.
+
+    method GET ve POST tipindedir. get ile bilgiler link çubuğunda bariz şrkilde gönderilir.bu güvenlik açığı oluşturur.
+
+    get bilgi almak post gizli olarak bilgi göndermek için kullanılır.POST methodunda form bilgileri HTTP'in Post methodu kullanılılarak gönderilir
+
+form yapısı genelde server'a bilgi gönderir.
+id ve name yapısı kod içinde aitlik sağlar ve bu aitlikle css ve fonksiyon işlemleri gerçekleşir.
+
+tabindex ile tab tuşuna basıldığında elementler arası sıranın nasıl olcağına karar veririz.default olarak etiket sırasına göredir.
+
+
+
+target 
+Value	Description
+_blank	The response is displayed in a new window or tab
+_self	The response is displayed in the same frame (this is default)
+_parent	The response is displayed in the parent frame
+_top	The response is displayed in the full body of the window
+
+
+
+ -->
+<form target="_blank" name="siparis" id="siparis" action="/action_page.php" method="get">
+<!--	
+Attribute 	Description
+disabled 	Specifies that an input field should be disabled
+max 		Specifies the maximum value for an input field
+maxlength 	Specifies the maximum number of character for an input field
+min 		Specifies the minimum value for an input field
+pattern 	Specifies a regular expression to check the input value against
+readonly 	Specifies that an input field is read only (cannot be changed)
+required 	Specifies that an input field is required (must be filled out)
+size 		Specifies the width (in characters) of an input field
+step 		Specifies the legal number intervals for an input field
+value 		Specifies the default value for an input field
+autocomplete  önceden girilen verileri akılda tutar.
+The autocomplete attribute works with <form> and the following <input> types: text, search, url, tel, email, password, datepickers, range, and color.
+ -->
+
+
+
+
+
+<!-- color tipiyle renk seçim menüsü çıkarılıp kullanılabilir. -->
+<input type="color" name="color" value="#ddd" ><br>
+
+<input type="image" name=""><br>
+<input type="search" name=""><br>
+<input type="url" name=""><br>
+<input type="time" name=""><br>
+
+
+<!-- label etiketi yazı yazmamızı sağlar.
+for yapısıyla ilgili elemente atama yapılabilir.
+ -->
+
+<label for ="firstname"  >İsim</label>
+
+<!-- input kullanıcıdan veri alır.en önemli form elementidir.
+type ise veri alan yapıyı belirtir.
+name alınan verinin hangi değişken yapısında tutulacağını belirtir.
+size , form elementinin pixel boyutunu verir.
+
+
+labeldeki for değişkeniyle text'teki id değişkeninin verileri aynı olmalı böylece label'e tıklandığında direk textboxa geçebilir.
+placeholder ile kullanıcıya ipucu verebilirsiniz.
+size default olarak 20 karakter uzunluğundadır.
+autofocus ile sayfa ilk açıldığında hangi veriyi ilk istiyorusak ona yönlendiririz.
+bir sayfada bir tane olmalı aksi halde ilk yazılan input elementini kabul eder.
+disabled ile elemente veri girişini engeller.
+readonly de disabled gibi çalışır ancak arka plan rengi sabit kalır.
+maxlength veri üst sınırını belirtir.
+pattern An input field that can contain only three letters (no numbers or special characters):
+disabled="disabled" readonly="readonly" pattern="[A-Za-z]{3}
+ -->
+<input type="text"  autocomplete="on" autofocus placeholder="adını gir" id="firstname" name="" minlength="2" maxlength="10" size="15"   tabindex="1" " ><br>
+
+<!-- password yapısıyla şifre kutuları oluşturulur.value değerine girilen değer default kabul edilir. 
+required ile alanın kesin doldurulmasını isteyebiliriz
+-->
+<label for="password" >Şifre</label>
+<input type="password" name="password" id="password"  value="Password" placeholder="şifre" tabindex="3" required=""><br>
+
+<!--Hidden elementler web sayfasında görülmezler. Bunlar zaten belli olan verileri CGI programına göndermek için kullanılırlar.-->
+<input type="hidden" name="mailaddress" value="tekzaf@yahoo.com"></input>
+
+<!--mail verisi için 
+textbox'tan ne farkı var derseniz ?
+cevap mantıksal ve yapısal olarak ayrılmaları
+kontrol durumları regex ile kontrol edilir.
+ -->
+<label for="email" >E-mail</label>
+<input type="email" autocomplete="on" id="email" placeholder="you@example.com" tabindex="2"><br><br>
+
+<!--telefon verisi için -->
+<label for="telefon">Telefon</label>
+<input type="tel" id="telefon" placeholder="(555) (555 55 55)"><br><br>
+
+
+
+<!-- 
+textarea etiketiyle multiline veriler alınabilir ve gönderilebilir.
+rows ve cols ile size belirlenir.
+-->
+
+<label for ="adres" >Adres</label>
+<textarea  id="adres" rows="10" cols="40" name="bilgi">
+
+	Lütfen Adresinizi Giriniz :
+
+</textarea> <br>
+
+
+
+
+<!--
+Checkbox yapısı veri almaya yarayan element tipi.Sorgu ile beraber kullanılır
+checked ile default değer atanabilir.
+-->
+dürümde ne olsun <br>
+soğan
+<input type="Checkbox" name="yemek" id="soğan" checked="checked"><br>
+maydanoz
+<input type="Checkbox" name="yemek" id="maydanoz"><br>
+
+
+<!-- fieldset ile elementleri gruplayabliriz. -->
+
+<fieldset>
+
+<!-- legend ile gruplanan çerçeveye mesaj biligisi verebiliriz -->
+
+<legend>Teslimat</legend>
+
+	<!--
+RadioButton birçok seçeneğin olduğu durumlarda kullanılan element tipi.tek input alınır
+isimleri eşleşmezse farklı radiobutton olarak algılanır ve aynı anda seçşlebilir
+
+checked ile default olarak seçilmek istenen ayarlanabilir.
+
+-->
+
+
+
+Hemen 30dk
+<input type="radio" name="teslimat" id="hemen" value="30" checked="checked" ><br>
+Zamanlı
+<input type="radio" name="teslimat" id="zamanli" value="60">
+<br>
+
+</fieldset>
+
+
+
+
+<!--
+number element yapısı bize decimal sayı verilerini almamızı sağlar.
+min ve max ile range belirlenir.
+-->
+Miktarı giriniz: 
+<input type="number" name="" min="0" max="10"><br>
+
+
+<!--
+combobox veya drop-down list.türkçe olarak açılır liste.
+select etiketi içine option etikene veriler girilir.
+value değeri mesaj ile aynı değerde olmalı ki manipülasyon ve veriyi kullanım işlemleri kolaylaşsın.
+-->
+Pizza Nasıl olsun:
+<select  name="Pizza" id="pizzasecim" >
+
+	
+	<optgroup label="Hamur">
+		<option value="ince ">ince kenar</option>
+		<option value="normal">normal</option>
+		<option value="kare kenar">kare kenar</option>
+	</optgroup>
+
+	<optgroup label="Kenar">
+		<option value="sarımsaklı">sarımsaklı</option>
+		<option value="parmesanlı">parmesanlı</option>
+	</optgroup>
+	
+
+</select><br><br>
+
+Pizza Nasıl olsun:
+<select  multiple="multiple" >
+
+	
+	<optgroup label="Hamur">
+		<option value="ince ">ince kenar</option>
+		<option value="normal">normal</option>
+		<option value="kare kenar">kare kenar</option>
+	</optgroup>
+
+	<optgroup label="Kenar">
+		<option value="sarımsaklı">sarımsaklı</option>
+		<option value="parmesanlı">parmesanlı</option>
+	</optgroup>
+	
+
+</select><br><br><br>
+
+
+<!--
+date ile tarih verisi alınır.
+
+-->
+Sipariş tarihini gir:
+<input type="date" name="day"  max="1998-12-31" pattern="\d{4}-\d{2}-d{2}" title="YYYY-MM-DD" ><br>
+
+
+
+
+<!--
+list verisiyle datalist id'si eşleşmeli.
+-->
+<input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist><br>
+
+
+<!-- submit kaydet anlamına gelir value ile butona isim verebilirsiniz.
+	Aşağıdakiler sadece type="submit" ile kullanılır.
+formtarget target ile aynı
+formnovalidate default validate yerine kullanılır.
+formmethod get ve post
+formaction  bilgilerin gideceği sayfa
+
+
+
+The formenctype attribute specifies how the form data should be encoded when submitted (only for forms with method="post").
+The formenctype attribute overrides the enctype attribute of the <form> element.
+The formenctype attribute is used with type="submit" and type="image".
+
+Send form-data that is default encoded (the first submit button), and encoded as "multipart/form-data" (the second submit button):
+
+
+-->
+
+<input type="submit" formenctype="multipart/form-data" id="" formnovalidate name="Submit" value="Kaydet" formtarget="_blank"><br>
+
+
+<!-- reset verileri sıfırlar-->
+<input type="reset" name="sifirla"><br>
+
+<!--button tıklanabilir yapı oluşturur.
+	type değerini browser'a göre düzenle bazı browserlar farklı yapı kullanabilir.
+onClick eventi ile butona tıklandığındaki aksiyonu belirtebiliriz.alert fonksiyonu ile kullanıcıya mesaagebox çıkarabiliriz.
+-->
+
+<button type="button"  onclick="alert('sipariş verildi')"> Siparişi Ver</button><br>
+
+
+<!-- range tipi ile aralık seçme yapısı oluşturulur.
+step ile atlama aralığı belirtilir.
+-->
+ 0 <input type="range"  id="a" name="a" value="50" step="10"> 100 <br>
+
+<input type="image" src="" alt="imagename" height="" width="" name="">
+
+<!-- file tipi dosya yüklemek için kullanılır. 
+accept ile dosya türü belirtebiliriz.
+multiple  ile bir çok dosya seçtirebiliriz.
+-->
+
+<input  type="file" accept="image/*,.rar" multiple  name="upload" id="upload">
+
+</form>
+</body>
+</html>
+<!-- -->
+
