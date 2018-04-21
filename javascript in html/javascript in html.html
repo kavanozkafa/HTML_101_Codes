@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<title>Kavanozkafa</title>
+	<meta charset="utf-8">
+	<script src="htmlders.js" type="text/javascript"></script>
+	<hr>
+
+	<script type="text/javascript">
+	
+/* type 	media_type
+src 	URL
+async 	async 	Specifies that the script is executed asynchronously (only for external scripts)
+charset 	charset 	Specifies the character encoding used in an external script file
+defer 	defer */
+
+
+	document.write("javascript ile  head yapısının içinde yazıldım.");
+	document.getElementById("js").innerHTML = "javascript ile yazıldım.";
+
+</script>
+</head>
+<body>
+
+<hr>
+<code>
+
+<!-- Bir yazıda kod paylaşılacağı zaman bu etiketler arasına yazılır. -->
+	document.write("javascript ile yazıldım. ");
+ </code>
+<hr>
+
+<b id="js" ></b>
+<script type="text/javascript">
+	
+/* type 	media_type
+src 	URL
+async 	async 	Specifies that the script is executed asynchronously (only for external scripts)
+charset 	charset 	Specifies the character encoding used in an external script file
+defer 	defer */
+
+document.getElementById("js").innerHTML = "javascript ile body yapısında yazıldım.id ile manipülasyona uğradım.";
+
+	document.write("javascript ile body yapısında yazıldım.");
+
+	
+	
+
+</script>
+
+<!-- tarayıcı js çalıştırmazsa ekrana yazdırır.hem body hem de head kısmında yazılabilir. -->
+<noscript>Tarayıcın JavaScript çalıştırmıyor.</noscript>
+</body>
+</html>
