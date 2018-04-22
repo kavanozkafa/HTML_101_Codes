@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<title>Kavanozkafa</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<!--
+number element yapısı bize decimal sayı verilerini almamızı sağlar.
+min ve max ile range belirlenir.
+-->
+Miktarı giriniz: 
+<input type="number" name="" min="0" max="10"><br>
+
+
+
+<!-- color tipiyle renk seçim menüsü çıkarılıp kullanılabilir. -->
+<input type="color" name="color" value="#ddd" ><br>
+
+
+<!--
+date ile tarih verisi alınır.
+
+-->
+Sipariş tarihini gir:
+<input type="date" name="day"  max="1998-12-31" pattern="\d{4}-\d{2}-d{2}" title="YYYY-MM-DD" ><br>
+
+
+<!-- range tipi ile aralık seçme yapısı oluşturulur.
+step ile atlama aralığı belirtilir.
+-->
+ 0 <input type="range"  id="a" name="a" value="50" step="10"> 100 <br>
+
+
+
+<!-- file tipi dosya yüklemek için kullanılır. 
+accept ile dosya türü belirtebiliriz.
+multiple  ile bir çok dosya seçtirebiliriz.
+-->
+
+<input  type="file" accept="image/*,.rar" multiple  name="upload" id="upload"><br>
+
+
+
+<!-- Supported Common Attributes 	autocomplete, list, maxlength, minlength, pattern, placeholder, required, size.-->
+<input type="search" name="">
+<button>Search</button><br>
+
+
+<!--Supported Common Attributes 	autocomplete, list, maxlength, minlength, pattern, placeholder, readonly, and size-->
+url
+<input type="url" name=""><br>
+
+
+<!-- kullanıcın rahatça zamanı saat ve dakika olarak girmesini sağlar.
+-->
+saat :
+<input type="time" name="saat" id="saat" required="" min="12:00" max="18:00" value="13:30:25" autocomplete="autocomplete" readonly="readonly" step="5" ><br>
+
+
+
+<!-- Supported Common Attributes 	autocomplete, list, readonly, and step. -->
+ay
+<input id="month" type="month">
+</body>
+</html>
+
