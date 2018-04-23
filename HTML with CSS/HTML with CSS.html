@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<title>Kavanozkafa</title>
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<!-- online css dosyalarına da referans verilip kullanılabilir. -->
+	<!-- Farklı tasarım yapılarını birbirinden ayırmak için css dosyalarını ayırabilirsiniz.
+		Bu durumda aynı aynı elemente override olması durumunda hiyerarşik olarak altta belirtilen
+		css dosyası geçerli olur.
+	-->
+
+	<style type="text/css">
+		
+		h6,h1{
+
+			background-color: lightgreen;
+		}
+
+		#paragraf{
+
+			background-color: red;
+
+		}
+
+		.liste{
+
+			background-color: silver;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- -->
+
+<!--CSS programlama dili değildir.Arayüz oluşturma yapısıdır.CSS sayesinde kullanıcıya daha kullanılabilir arkadaş canlısı web yapıları sunabiliriz.Web Tasarımın ön tarafını oluşturan CSS ,birçok özellik sağlar. 
+
+style etiketleri arasınacss dosyasına kodları yazarak tasarımlarımızı gerçekleştirebiliriz.
+css syntax'ına uygun yazmayı unutmayın .bloklar {} arasına yazılır ve her satır ; ile bitmek zorunda.
+
+<link href="style.css" rel="stylesheet" type="text/css"/> head yapısında bunu yazarak harici css dosyalarımızı çağırabiliriz.
+
+css ile manipule işlemleri yaparken etiket adını,id yi vey a class adını kullanarak gerçekleştiririz.
+
+
+class özelliği birçok kez farklı etiketlerde kullanılır.
+id ise farklı etiketlerde kullanılamaz. ve yalnızca bir kere kullanılır.
+etikete göre tasarım ise o etiketin bulunduğu her yapıyı belirlenen özelliklere göre değiştirir.
+
+
+etiket kendi ismiyle
+id # ile
+class . veya etiket. ile kullanılır.
+.class ile tüm class yapıları etiket.class ile de o etiketteki class'ı eşleşenleri manipüle eder.
+
+-->
+
+<h1>Burası head yapısında etiket adına göre css ile tasarlandı.</h1>
+
+<h6>etiketler ile css tasrımı yaparken etiket aralarına , virgül koyarak farklı etiketlere aynı css tasarımını atayabilirsiniz.</h6>
+
+<p id="paragraf" >Burası head yapısında id ismine göre css ile tasarlandı.</p>
+
+
+<li class="liste">Burası</li>
+<li class="liste">head</li>
+<li class="liste">yapısında</li>
+<li class="liste">class</li>
+<li class="liste">ismine</li>
+<li class="liste">göre</li>
+<li class="liste">css</li>
+<li class="liste">ile</li>
+<li class="liste">tasarlandı.</li>
+
+
+<hr>
+<table  cellpadding="20" cellspacing="10">
+	<tr id="tablo">
+			<td>11</td>
+			<td class="cell">12</td>
+			<td>13</td>
+
+		</tr>
+<h3>Burda ise harici css dosyasında 3 yapı ile de tasarım gerçekleşti.		
+gümüş kısım class
+kırmızı kısım id
+yeşil kısım ise etikete göre tasarlandı.</h3>
+
+</table>
+
+
+<p style="background-color:darkred;font-size:24px;color: white;">Tasarım inline yani tek bir element ( <span style="color: yellow">yazı içinde farklı yapıyı farklı tasarımla ayarlamak için span etiketini kullan.</span> ) için de kullanılabilir. </p>
+
+
+<button id="buton">Css</button><br>
+
+
+ 
+<div class="ilk">
+	<p style="font-size: 30px" >/*  div ile nested yapıda css kullanma */ </p> 
+	<button id="buton">Css</button>	
+	<div class="ikinci">
+		<p style="font-size: 30px" >/*  div ile nested yapıda css kullanma */ </p> 
+		<button id="buton">Css</button>
+		<div  class="son">
+			<p style="font-size: 30px" >/*  div ile nested yapıda css kullanma */ </p> 
+			<button id="buton">Css</button>
+			
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+</html>

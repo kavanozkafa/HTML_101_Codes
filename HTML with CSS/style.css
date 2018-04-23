@@ -1,0 +1,66 @@
+		
+	
+		/*yorum*/
+		table{
+
+			background-color: lightgreen;
+			border: 1;
+		}
+
+		#tablo{
+
+			background-color: red;
+			font-size: 10px;
+			color: yellow;
+
+		}
+
+		.cell{
+
+			background-color: silver;
+			font-size: 50px;
+			color: navy;
+		}
+
+		hr{
+
+			background-color: blue;
+		}
+
+		h3{
+
+				background-color: yellow;
+			  	font-family: verdana;
+    			font-size: 20px;
+    			color: black;
+		}
+
+		#buton 
+		{
+
+			color: maroon;
+			background-color: lightgreen;
+			height: 100px;
+			width: 200px;
+			font-size: 50px;
+			padding: 20px;
+			margin-bottom:50px;
+
+		}
+
+			/*  div ile nested yapıda css kullanma */
+		.ilk:hover {
+
+			background-color: red;
+		}
+
+
+		.ilk .ikinci:hover {
+
+			background-color: pink;
+		}
+
+		.ilk .ikinci .son:hover {
+
+			background-color: navy;
+		}
