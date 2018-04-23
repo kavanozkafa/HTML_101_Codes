@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<title>Kavanozkafa</title>
+	<meta charset="utf-8">
+
+	<!-- bu tag ile responsive mode sağlanır. device-width ile genişlik cihaza göre ayarlanır.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1><i>1</i></h1>
+
+  <h1>Beşiktaş</h1>
+  <h2>Beşiktaş , 1903 yılında kurulan Türk spor tarihinin ilk kulübüdür</h2>
+
+
+<hr>
+
+<h1><i>2</i></h1>
+	<!-- burdaki css width ile browser a göre genişlik ve yüksekliğini kendi ayarlayacak-->
+	<img src="timur.jpg" style="width:100%;"">
+
+
+<hr>
+
+<h1><i>3</i></h1>
+	<!-- burdaki yapı ile farklı genişliklere farklı görüntüler göstererek yapı daha anlaşılır hale gitirliyor.-->
+<picture>
+  <source srcset="audrey.jpg" media="(max-width: 600px)">
+  <source srcset="natalie.jpg" media="(max-width: 1500px)">
+  <img src="natalie.jpg" alt="women" style="width:auto;">
+</picture>
+<hr>
+
+<h1><i>4</i></h1>
+<!-- burdaki yapı ile farklı büyüklüklerdeki yapılar responsive modda boyutlarını değiştiriyor.
+Burdaki vw birimi %viewport anlamına gelir. Browser ölçüsü viewport ölçüsüdür. 10vw ise Browser ölçüsünün %10 udur.
+-->
+<h1 style="font-size:10vw;">Beşiktaş , 1903 yılında kurulan Türk spor tarihinin ilk kulübüdür</h1>
+
+<p style="font-size:5vw;">Beşiktaş , 1903 yılında kurulan Türk spor tarihinin ilk kulübüdür</p>
+
+<hr>
+
+<h1><i>5</i></h1>
+
+
+
+<hr>
+
+<h1><i>6</i></h1>
+
+
+
+</body>
+</html>
