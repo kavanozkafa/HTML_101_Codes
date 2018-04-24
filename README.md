@@ -1,3 +1,9 @@
-# HTML_Notlar
+# HTML_101_Notes
 
-Konuların kodlarına html dosyasını indirip editörde açarak bakabilirsiniz.
+You can use all these codes.These notes are for beginners.
+
+You should also check out html tutorials site like ;
+
+Mozilla : https://developer.mozilla.org/en-US/docs/Web/HTML
+
+
