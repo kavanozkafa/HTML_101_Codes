@@ -2,6 +2,8 @@
 
 You can use all these codes.These notes are for beginners.
 
+My tutorials about HTML in youtube : https://www.youtube.com/playlist?list=PLHVlFNyTlbnMfaa_XAeSYGzAlkEcAWiJH
+
 You should also check out html tutorials site like ;
 
 Mozilla : https://developer.mozilla.org/en-US/docs/Web/HTML
